@@ -1,3 +1,1664 @@
+##################################
+Tableau ITV Online--
+-------------------
+Here we will discuss about,
+What is tableau, Tableau architecture and tableau product.
+
+Overview of BI--
+Data Mining-- is data preprocessing.
+Analytical processing--Combining tables from diff sources.
+Development-- Now that data is with us-- u can do feature eng.
+Visualization-- Charts.
+
+In tableau visualization is dashboards.
+
+Magic Quadrant Salesforce crm
+
+Tableau features-- 
+1. Collaboration and Sharing-- same data should be visible to everyone.
+And also should not be visible to everyone.
+So secured sharing is very imp.
+
+2. Real time analysis-- With live connection ,
+automatically, data will be reflected.
+
+3. In-memory data-- connection with live
+data source and data extraction as in-memory.
+This is done using cache data.
+
+4. Advance visualizations. U can even create custom visulas.
+
+5. Ask data is like questionari where u can ask quest
+on natural lang.
+
+6. Mobile view--Dashboards optimized for hand held devices.
+
+--Tableau Product Suit--
+Tableau desktop,
+tableau public
+both are used for development.
+Data connection, publishing of sheet, etc, is possible in 
+both of them.
+
+Tableau server and tableau cloud are services.
+U can upload and publish ur data in them.
+So the sheets and dashboard u create in tableau dektop or 
+public, u can upload in tabl server or cloud.
+
+Tableau reader and tableau prep reader--
+
+tab reader is like pdf. U cannot edit it.
+tab prep is a special tool for data cleaning.
+
+Now all these products have a trial period of 14 days.
+Now tab public, cloud and prep are all free.
+
+So we r going to use tab public and tab cloud.
+
+Tableau desktop vs tableau public.
+
+How tableau works--data -- data connectors
+
+download tableau public-- 
+
+wekend batch--tab/13march/9-12 pm.
+1st.
+54:51-- https://drive.google.com/drive/folders/1I82drehRlm_EfwEDF1prEbCB_lJDGpaT
+
+Now, tableau public has limited connections.
+Then in tableau desktopS2.pdf , show connectors of
+tableau desktop.
+
+Now in installed tableau-->file--> open from tableau public-->
+got the tableau public sign in pop up-->
+for 1st time create my account---> 
+Parinita, Jain, parinita@itvedant.com, Pa$$word@2024
+then sign in into the pop up,
+u will see the data, that u can open.
+This data is getting fetched from cloud.
+click on any file and u can see, dashboard.
+
+on the top left corner,tableau sign is there,
+click that-- on the right corner, u will see,
+viz of the day which tells about trending charts.
+
+See, file:///D:/Parinita_itvedant/TableauItvedantOnline/Presentations/TableauS2.pdf
+
+Now, steps involved for creation of tableau report--
+1. Connect to data source,
+2. Choose dimensions and measures,
+3. Apply visulaization technique.
+
+D:\Parinita_itvedant\TableauItvedantOnline\Datasets--
+Sample - EU Superstore
+
+drag orders ,
+
+currently, use data interpreter is unticked.
+tick it, and u will see, cleaned data.
+
+Now , once u drag table, U can even rename--
+Orders (Sample - EU Superstore) to Orders (SampleSuperstore)
+
+Now in tableau public , we donot get live or extract option.
+Its always live connection.
+
+filters we will see later.
+
+In blending and joining we will see how multiple sources are joined.
+
+So below file, tablue icon-- connect-- text file--
+D:\Parinita_itvedant\PowerBi\PowerBI For teaching\Data--
+ Car details v3.csv
+
+Now the terminology u will see is files.
+U can even change the db name.
+
+from google drive-- it will ask for sign in
+
+Now coming to step 2-- choose dimensions and measures.
+
+So now we r at sheet level--
+
+Dimensions are fields that can be considered as independent 
+variable. For eg primary key.
+So usually the fileds that cannot be aggregated and are used for 
+row or col headings are dims, eg Regions.
+i.e. We cannot apply mathematical ops on them.
+eg string , date .
+
+Then measures are the dependent variables, 
+i.e. their values are functions of 1 or more dims.
+Usually fields that can be measured , aggregated,
+or used for mathematical ops.
+eg. Sales.
+So whole numbers, %,etc.
+
+So tableau divides fields automatialy into dimensions
+and measures.
+Dims - blue colur, measures-- green colour.
+
+So dims are qualitative
+while measures are quantitaive.
+
+Now going to sheet-- below click + sign, to get data sheet,
+once the data is loaded.
+
+file:///D:/Parinita_itvedant/TableauItvedantOnline/Presentations/TableauS3-dataFileType,sort,blend,join,relationship.pdf
+
+Tableau shelves and cards--
+We have 4 shelves-- Cols, Rows, Filters and Pages.
+
+Cols will create the cols, rows will create rows in visualization,
+Filters will filter the pages, then pages will create different pages
+of visualization.
+
+1 Card is there-- which is a marks card.
+
+Marks card controls the color, size shape,text and detail
+of visualization.
+
+So we use shelves and cards , to build the structure of ur
+visualization, and control the number of marks 
+in the view by including or excluding data.
+
+Next is col shelves and row shelves--
+Now we have a segment col  whose sub sections are
+consumer, corporate and home office.
+
+rows will be created by row shelf,
+cols will be created by col shelf.
+
+If you place dimension in column or row shelf, headers are created
+If you place measure in column or row shelf, axes are created
+
+
+Marks card--
+Marks card is on the left hand side.
+It has label detail,colr,size,tooltip,shape,etc.
+
+So ur structure , intsead of bar chart,
+u can also show by squares,etc.
+Color,label everything u can change.
+
+Filter shelf--
+
+The Filters shelf allows you to specify which data to include and exclude
+You can filter data using measures, dimensions, or both at the same time
+
+Page Shelf--
+This creates number of pages.
+The Pages shelf ,break a view into a series of pages so you can better analyze how a specific 
+field affects the rest of the data in a view.
+We can try Day(order date) for break the view on workbook
+
+Page shelf we will try with hierarchy chart.
+
+Let’s try ourselves
+• Create workbook which displays sales per segment for Furniture and technology only.
+• Display Names of customer start with letter A with their Sales.
+• State-wise Sales in UK Country.
+• Monthly sales trends from Jan to Dec for 2017 and 2018
+
+1.
+shelves and card demo1--
+drag and drop segment--cols
+
+u r getting 1 orange colr highlighter,
+
+u got the cols,
+then in rows-- u got rows.
+
+now put profit in col.
+
+u can also swap it from menu bar.
+
+U can rename to segment wise profit.
+
+Now focusing on marks card--
+color--
+size
+label-- tick it
+detail--
+tool tip.
+
+Now on tooltip put profit.
+
+now put segment on filter.
+
+On filter,u can also put ,profit,
+and u can set the range--apply--ok.
+
+to remove filter segment-- right click on segment--
+clear filter.
+
+right click on sum(profit)-- remove filter.
+
+
+2:12--
+https://drive.google.com/drive/folders/1I82drehRlm_EfwEDF1prEbCB_lJDGpaT
+--04:13--
+
+Q1,Q2-,Q3 and Q4
+i.e. 
+Create workbook which displays sales per segment for Furniture and technology only
+Display Names of customer start with letter A with their Sales.
+• State-wise Sales in UK Country.
+• Monthly sales trends from Jan to Dec for 2017 and 2018
+
+are related to filtering.
+
+
+Q1. sales is a measure, while furniture and tech are dimensions.
+
+Visualization--
+col-- segment,category, rows-- sum(sales) 
+now we want only furniture and technology.
+so put category into filters, furniture and technology.
+
+Noq put category into color.
+u can also do like-- col--category,segment
+u can change color.
+
+U can change the view to entire view.
+
+Q2.-- Display Names of customer start with letter A with their Sales.
+measure--sales
+dimension customer name.
+So,
+col--cust name,
+rows-- sales
+filter-- cust name
+So in filter-- wildcard-- tick startswith, Match value-- A
+-- Apply ok
+
+Q3. State-wise Sales in UK Country.
+measure -- Sales
+Dimension-- Country,state.
+filter-- country-- deselect all by none-- only select UK.
+
+Q4. Monthly sales trends from Jan to Dec for 2017 and 2018
+
+cols-- order date, rows-- sales
+filter-- order date-- select year--tick 17, 18 only.
+But we want to see complete month data from 17 , 18.
+So,cols-- year(order date) -- right click--select month.
+
+but this is not seperate year wise, so puy in--
+col--year(order date),month(order date)
+
+U can change the colr.
+
+ctrl+s for save, gets saved into tableau cloud.
+
+------
+Data types in Tableau
+text(String),date,date and time,
+numerical,boolean values,geographic,cluster group.
+
+u can change the datatype for a field
+either on data source page or in data pane.
+
+file:///D:/Parinita_itvedant/TableauItvedantOnline/Presentations/TableauS3-dataFileType,sort,blend,join,relationship.pdf
+How to change the data type?
+
+So go to data source page--
+Orders-- see the data type o diff cols.
+
+So just right click on the datatype- change it to string
+string-- change back to number.
+
+--
+Blend join and relationship--
+Blend ,Join and Relationship
+• These are used to combined different related tables horizontally having some common filed
+
+So, col heading doesnt matter, Col value matter.
+
+So drag and drop cols, it automatically blend and join them.
+
+So basically we have to decide, whether to use join, blend or relationship.
+
+Now blending is at sheet level,
+join and relationship is on data source level.
+
+D:\Parinita_itvedant\TableauItvedantOnline\Datasets
+see Customer.xlsx,
+Customer order.xlsx,
+Products.xlsx
+
+So create a new tableau workbook.
+
+Blend :
+• When two or more sheets have different level of details
+• Different queries for different data sources are linked by common filed
+• By default left outer join is done in blending
+• Work on Primary and Secondary data source
+where left is primary while right is secondry.
+
+Its limitation--
+More than one row for 
+blending is not supported
+
+so, 1st connect, customer.xlsx-- 
+name db-- blend 1
+sheet name-- blend
+
+rows-- cust id, name, last name
+marks-- text-- salary
+edit <Sheet Name>Customer Name with Product Order and Sale Price
+
+then new data source-- customer order.xlsx--
+rename db to Blend 2.
+
+now on that table drop sales from blend2.
+
+once u drop it, u can see, chain kind symbol
+appearing in front of cust id.
+
+now i need product details,
+
+So tableau sign -data source--products.xlsx
+rename db-- blend 3.
+Now goto blend sheet-- drop product name rows,
+if u will notice, we got *,
+because, its kind of a 1 to many relationship.
+1 cust can place many orders.
+
+So blending doesnt support 1 or more rows.
+
+Now we have got sales from cust order,
+becoz multiple cells are aggregated and 1 result is produced.
+thats why aggreagtion between customer and 
+customer -order is working.
+
+Now to remove this limitation, either u can change
+the join type, or u can change the primary and secondry 
+data type.
+
+So 1 st going with swapping, then with join.
+
+Now on the ribbion, see the option
+of clear sheet-- click that.
+
+so now i am 1st selecting blend 2--
+rows--cust id, rows id, prod id,
+and then drop sales on table.
+
+Next take blend 1-- 
+rows-name,lastname,salary
+then from 3-- 
+rows prod name.
+
+So now data is completely proper
+with no stars.
+
+here, cust 5 data is not visible,
+becoz of left outer join.
+
+so, we will go to joins.
+
+Data Model(version 2020 onwards) has 2 layers.
+• Data model as a diagram that tells Tableau how it should query data in the connected database 
+tables.
+• Two Layers:
+1. Logical Layer implements relationship
+2. Physical Layer
+
+joins--
+
+new wrkb. 
+data source-- join-- customer
+rename db-- join 1
+Now in the rect, u can see cust written.
+Double click on that and u will get physical layer.
+
+next from connections add-- add a new table
+customer -order, this will detect, joins betw them.
+
+now click on that inner join  -- change to full outer.
+
+then add products-- change join to full outer join.
+
+then close the physical layer.
+ U will not see any details on logical layer.
+
+So now create new sheet-- join--
+Now u can use any data, data will be visible to you
+without any stars.
+
+so put-- rows cust id, name, last name,
+on table drop salary and sales.
+
+See the salary, this is not correct. Right.
+The salary is getting added that many times the cust
+has orderd any product.
+
+If u will drop product name on rows,
+then this will not happen.
+
+So the moment, we r removing prod name,
+the values are getting aggregated.
+
+So we can overcome this by relationship.
+
+So new sheet-- rename relationship,
+data source-- tableau design-- micro excel--
+Customer open.
+give db name-- Relationship Concept
+so add new table-- customer order
+3rd table -- products
+
+then from sheets section drop customer order
+and products.
+
+now the line that we see in relationship is noodle line.
+its cardinality is * to *.
+
+so now come to sheet relationship.
+rows-- cust id, name,last name,
+then on table, drop salary and sales.
+
+
+file:///D:/Parinita_itvedant/TableauItvedantOnline/Presentations/TableauS4-group,set,bin.pdf
+Next is Organizing and simplifying data by--
+--Grouping the data.
+Its like paper clip.
+
+
+Let’s try ourselves
+• Display sales for product group Refrigerator, Phone and clock
+• Display sales value which is less than 5 for Category
+• Display profit and sales per customer group arranged alphabetically.(e.g. A group, B group, 
+etc.) 
+
+so create 3 new sheets-- group1, group2,group3.
+
+Now we will use sample superstore.
+
+So data source--put orders sheet in middle.
+
+group 1 -- change the sheet heading to Display sales for product group Refrigerator, Phone and clock
+lly, for gp 2, and gp3.
+
+Now come to gp 1--right click on produict name--
+create-- group-- click on find--- find members--
+Refrigerator--find all--then clcik on group
+give name-- refrigerator.
+
+Next in find members-- write phone--
+find all-- group---reneme Phone--
+lly find member-- clock, find all, group--
+rename -- clcok
+next tick include other
+-- apply --ok
+
+Next in group 1-- drop product name(group)
+then drop sales.
+then if u dont want to show other,
+then drop product name group into filter
+deselect other-- apply ok
+
+So next gp 2---
+
+So here we will create group of sales.
+
+right click on sales--create group--
+
+so press ctrl key and select all the values below 5.
+-- group-- less than 5
+-- include other -- for not less than 5.
+U can even rename other to greater than 5.
+--- apply -- ok
+
+so now drag sales group and sales .
+
+So now gp 3--
+right click cust name-- create group--
+then instead of contains write starts with.
+find memebers-- A-- find all--group--rename A group
+lly for B---B group
+then incliude others-- rename to c-z groups.
+
+
+Set--
+Sets allows us to arrange the data and related dimension values together
+• Create Set for dimension only
+• Set automatically adjust the values either In/Out
+• Sets are created based on some conditions
+• E.g. set of books and set of pencils
+Type of Set
+1. Dynamic Set
+2. Fixed Set
+
+Now in group we r unable to give any mathematical condition.
+So we have sets.
+We have 2 conditions in set. In and out.
+In are the members which satisfies given condition.
+out which doesnt satisfy.
+
+
+So create 2 sets, new sheet--nmae--set 1--General set and
+
+then set 2-- conditional set
+
+then set 3-- top or bottom set.
+
+now-- set 1--cols-- sub category, rows-- profit
+
+now for creating general set-- randomly select 
+accessories, appliances,art and binders by ctrl key.
+then if u will hover or right click,
+u will get option of create set--rename Sub-Category General Set
+-- ok
+
+now put this into filter.
+or u can even out them into color.
+
+u can arrange them in anyway, it will be of same colr.
+
+Now if u want to edit theis,
+and u want to add another member,
+then select by ctrl all of them,
+click set sign-- click add to.
+
+lly u can right click on sub-category general set,
+and edit.
+
+Next is set 2-- Conditional Set--
+
+col- subcategory
+rows-- profit
+
+now , right click on sub category-- create--set
+name--Sub-Category Conditional Set
+condition--  by field-- profit-->=0,
+next drop sub-category conditional set into color.
+
+u can even edit out-- right click out on riht top
+-- edit colr-- select red -- ok.
+
+Now at a time , we can give 1 condition.
+
+Next set 3--
+right click sub category-- create --set-- top--
+--Sub-Category top 3 set--
+by field-- top-- 3 by profit--sum--ok
+
+now drop this on colors.
+
+u can even edit it.
+
+then for bottom--
+Sub-Category Bottom Set--by field-- bottom-3--
+profit--sum--ok
+
+Next is combined set-- ie. combining two sets 
+to create new set.
+
+Combine sets
+To combine sets:
+• select the two sets 
+• Right-click the sets and select Create Combined Set.
+• Type a name for the new combined set.
+1. All Members in Both Sets - the combined set will contain all of the members from both 
+sets.-- like full outer join
+2. Shared Members in Both Sets - the combined set will only contain members that exist in 
+both sets.-- like inner join
+3. Except Shared Members - the combined set will contain all members from the specified 
+set that don't exist in the second set.-- like left or right outer join
+• Click Ok
+
+So create new sheet-- combine set---
+<Sheet Name> Both top and bottom in single view
+col-- subcategory
+row--profit
+
+now click top set ctrl click bottom set
+-- right click--combined set-- rename--Combined Set
+-- select fulle outer--ok
+next put combined set in color.
+
+now sorting--by ribbion--
+then next to axis
+or right click on sub category--sort--manually
+--then u can just click art clcik arrow button,
+so now art is at the bottom.
+
+--clear
+
+next is nested sort--
+
+put-- cols-- cateory,sub-category
+rows-- profit
+-- sort--nested sort--
+
+https://drive.google.com/drive/folders/1I82drehRlm_EfwEDF1prEbCB_lJDGpaT
+--20-04-2024
+
+file:///D:/Parinita_itvedant/Tableau/TableauItvedantOnline/Presentations/TableauS5-charts,dual%20axis.pdf
+
+Types of Charts and Graphs
+• Bar Chart
+• Line Chart
+• Pie Chart
+• Maps
+• Scatter Plot
+• Gantt Chart
+• Bubble Chart
+• Tree map
+• Heat Map
+2. Types of Reference Lines, Bands, Distributions, and Boxes
+3. Dual Axis
+
+Bar Chart
+• Bar charts are especially effective when you have data that can be split into multiple categories.
+• Quickly compare data across categories, highlight differences, show trends, and reveal historical highs and lows
+at a glance.
+• Many customization are allowed
+
+tableau-- sample eu-store-- drop orders--
+new sheet--rename sheet as bar chart
+drag category into cols, sales into rows.
+
+u can get the chart from show me section too.
+enable labels from marks card.
+
+new sheet-- satcked bar chart-bar inside bar
+cols-- category
+rows-- sales
+color--region
+
+So for satcked bar cahrt-- we need 2 dims vs 1 measure.
+
+Side by Side bar chart--
+cols-- category,region
+rows-- sales
+
+Put region in color too.
+
+or u can also do 2 measure 1 dim--
+i.e. cols-- category
+rows-- sales,profit
+color--category
+
+new sheet-- rename-- histogram
+Histogram shows freq distribution.
+First we need to arange that on bins,
+i.e. clustering of data.
+
+So 1 st creating bins for sales value.
+we can create bins of measures only.
+So right click sales, create bin--
+size of bins--200
+now put sales on rows.
+then drop sales on table.
+
+now on label card-- instead of sum(sales) do cnt(sales)
+show me-- bar chart
+
+then click cnt(sales) on rows and convert
+it into continuous.
+
+this histogram is not available in show me.
+
+So for hist -- cretae bins, then do continuous.
+And compulsorily convert fre into count.
+
+Next is line graph--
+DIscrete vs continuous--
+Line Graph
+• Connects several distinct data points, presenting them as one continuous evolution
+• View trends in data, usually over time (like stock price changes over five years or website page views for the 
+month)
+
+
+So, new sheet-- line chart, 
+cols-- year(order date)
+rows -- sales
+
+from cols click on + and get quarter, month,date
+
+next sheet-- discrete vs Continuous
+same put -- cols-- order date, rows-- sales
+get quarter(order date)
+and see
+further split to month and see
+further split to day.
+This is discrete
+
+Next right click on day-- continuous,
+lly,for month and quarter-- continuouas.
+
+we got some series-- 
+
+Now in cols put day(order date)- make it continuous,
+rows-- sum(sales)
+
+Also notie once u r changing to discrete conti,
+the color is also changing.
+
+Next is measure names and measure values.
+
+Measure name is like col heading,
+measure value is like actual col values.
+
+cols-- measure names, rows-- measure values.
+
+Now in the marks card, if u will do avg(profit),
+measure names gets applied to filters by default.
+
+Now, we can use measure values as kpi values.
+So directly we can use them on dashboards.
+This we can do by show me-- tables--
+
+Next is pie chart--
+its like slices of 100%.
+
+Pie chart
+• It simply organizes data in the form of a pie and divides it into slices. Each slice has a different 
+size based on the magnitude of data.
+
+cols-- category
+rows-- sales
+
+show me-- pie
+next we will convert whole nos. into percentages.
+Next-- drop sales into marks labels.
+then marks sum(sales)--quick table calc--
+percent of total
+
+Next is dual axis--
+here u can plot 2 seperate measures on
+the same chart.
+
+cols-- segment
+rows-- profit and sales
+
+rows--right click--sum(sales)-- dual axis
+then from marks pane-- change from automatic to bar
+And profit from automatic to line.
+fit to entire view--
+then u will see data is getting overlapped.
+
+So we need to synchronize the axes.
+So right click on diagram axis profit,
+--synchronize axes.
+
+So now donut chart--
+
+new sheet-- donut chart--
+so 1 st we need to create reference axis.
+For that create calculated field--
+so, on the left--next to search dropdown--
+click-- create cal field-- Zero Axis-- put value 0--
+apply--ok
+next-- rows-- zero axis, zero axis
+
+we got 2 marks cards for them.
+
+So on the 1st plot pie, on the 2nd plot white ring
+and we will get donut chart.
+
+So on the 1 st marks card, put category on colrs and sales on labels.
+then instead of automatic do pie.
+
+then from size, increase size a little bit.
+
+in the 2nd zero axis-- instead of automatic--
+select circle-- color-- white
+
+then right click -- rows-- sum(zero axis)-- dual axis
+and then u can do % of taatl on 1st zero axis.
+
+Next is maps--
+Map
+• Geographic information associated with your data can be displayed using maps
+• Maps useful for postal codes, state abbreviations, country names
+
+cols--country,
+rows--profit
+
+show me-- filled map
+change color by clicking profit on right.
+
+Next is symbol map--
+col- country
+rows--profit
+show me--symbol map
+
+U can put profit into marks size
+
+So symbol map is generally used for showing density.
+so from marks pane only, 
+u can click on +country to get state,etc
+We can convert these symbols into pie chart.
+now put category into color
+and sales into labels.
+and instead of automatic selet pie.
+
+Next is scatter plot--
+Scatter Plot
+• Use scatter plots to visualize relationships between numerical variables.
+• You create a scatter plot by placing at least one measure on the Columns shelf and at least one
+measure on the Rows shelf
+
+cols-- profit
+rows-- sales
+what if we put cust name into detail.
+
+so this is our scatter plot.
+next to show individual customer,
+we will use motion chart or page shelf.
+
+motion chart is nothing but animation with page shelf.
+
+so for that creating hierarchy.
+
+Gantt bar chart-- for duration of activity
+
+Use Gantt charts to show the duration of events or activities.
+• In a Gantt chart, each separate mark (usually a bar) shows a duration.
+• For example, you might use a Gantt chart to display average delivery time for a range of products.
+
+col- week(order date)
+sub-category,ship mode
+color-ship mode
+
+Heatmap/Highlighted Table--
+
+Heat Map
+• Use highlight tables to compare categorical data using color.
+• create a highlight table by placing one or more dimensions on the Columns shelf and one or more dimensions
+on the Rows shelf.
+• Then select Square as the mark type and place a measure of interest on the Color shelf.
+cols-ship mode,
+rows-- sub category
+drop sales on table.
+
+show me-- heat map
+
+Next is tree map---
+Tree map
+• Use tree maps to display data in nested rectangles. 
+• You use dimensions to define the structure of the tree map, and measures to define the size or color of the 
+individual rectangles.
+
+
+cols-- category
+rows-- discount
+show me -- tree map
+
+then increase category from marks pane.
+The discount is highest on office suppllies,
+min on tech accessories,etc.
+For custome hierarchy--
+right click cust name-- cretae custom hierarchy,
+drop category into hierarchy,
+then right click subcategory--
+hierarchy-- add to hierarchy-- cusomer name
+
+now arrange -- category, subcategory then cust name.
+
+now, take customer name and put into page shelf.
+
+put customer name hierarchy into colr.
+cust name into page shelf,
+Then from marks sheklf details-- remove  category
+and subcategory
+
+Then from drop down, u can select any customer.
+
+So next to sq on right is a play button, clck that
+and it will play.
+
+this is motion chart.
+
+file:///D:/Parinita_itvedant/Tableau/TableauItvedantOnline/Presentations/TableauS6-parameter.pdf
+Next is parameters--
+
+A parameter is a workbook variable such as a number, date, or string that can replace a constant value in a
+calculation, filter, or reference line.
+
+1. Create
+2. Show Control
+3. Create calculated field
+4. Use
+
+so, 1 create parametre--
+Name-- Enter value 1
+datatype-- float
+Current value is default value.--0
+-- ok--
+lly, for value 2.
+
+then, right click parameters- show parameters.
+
+Next calculaetd field--
+name-- Result--
+drag parameter value ,
+so it will be like--
+[Enter value 1]+[Enter Value 2]
+-- apply--ok
+
+Now put this result into marks text--
+its showing wrong o/p.
+so right click-- marks pane result--
+attribute
+now change value 1 --80,value 2--10
+result will be there.
+
+next parameter 2--
+topN and botton
+
+https://drive.google.com/drive/folders/1I82drehRlm_EfwEDF1prEbCB_lJDGpaT
+04-21
+28:50
+
+Parameter2--TopN and BottomN subcategories wise profit in Single Sheet
+
+so,Use Cases for Parameter are--
+1. Top N
+2. Moving average
+3. Date Range
+4. Sort Stacked bar chart
+5. Filter unrelated data source in dashboard
+6. Dynamic dimension and measure
+
+So, 1st we will see- subcategory wise what all data we have--
+
+cols-- subcategory
+rows--profit
+
+sort in decreasing order.
+Highest 2 are top and bottom 2 are bottoms.
+
+So, here the top or bottom n value can change.
+So for that we will create set.
+So, right click sub category-- create set--name-- Sub-Category Top Set
+--top--enter a value-- 5 -- ok
+
+Now put  sub-category top set into marks color.
+
+lly we can create set for bottom--
+so,here we r getting either top or bottom.
+
+So, we will have a combined set--so select both of them with control--
+right click-- create combined set--name-- Top and Bottom Set
+
+Now put top and Bottom Set.
+
+Now for value of N we will create parameter.
+
+so, creaet parameter-- Top N-- default value-- 3--ok
+
+creaet parameter-- Bottom N-- default value-- 3--ok
+
+Next show these 2 parameters.
+
+Next to coonect paramerers with chart,
+no need of creating calc field,
+
+So goto sub-category top set--edit set--
+instead of 5 choose top n parameter-- apply--ok
+
+lly, for bottom n--
+
+Next is, Parameter3--Dispaly Order date wise sale enterd by User
+
+cols-- order date, rows-- sales--
+right click order date-- exact date.
+
+Now this data is too heavy.
+
+So we will take start date and end date from user. ANd show it.
+So we will need two parameters.
+
+creae parameter-- enter start date-- datatype--date
+current value-- 1/1/2015--ok
+
+creae parameter-- enter end date-- datatype--date
+current value-- 1/1/2018--ok
+
+-- show both parameter
+
+next creating calc field-- Date Range--just drag and drop--
+[enter end date]>=[Order Date]AND 
+[Order Date]>=[enter start date]
+
+-- apply -- ok
+
+Next u can put date range in filter--tick true--apply ok
+
+file:///D:/Parinita_itvedant/Tableau/TableauItvedantOnline/Presentations/TableauS7-Functions.pdf
+
+Logical Function
+• Logical functions allow finding whether the given condition is true or false.
+• Logical functions are incredibly useful for building custom categorization
+• Most commonly use logical functions are:
+1. IF
+2. THEN
+3. ELSE
+4. ELSEIF
+5. IFNULL
+6. IIF
+7. AND
+8. OR
+9. CASE
+10. END
+
+
+Logical Functions-- rows-- sub category, drop sales
+
+create calc field-- search logical-- inside logical-- search if--
+name-- if function
+
+IF [Category]="Furniture"
+THEN "Fur"
+ELSEIF [Category]="Office Supplies"
+THEN "Off"
+ELSEIF [Category]="Technology"
+THEN "Tech"
+END
+
+-- apply--ok
+
+next on rows-- if function
+
+Next-- logical--IIF function-- we can write single line code.
+
+new cal field-- IIF Function--
+IIF(Sum([Sales])>100000,"Condiion is met","Condition not met" )-- apply---ok
+
+So, rows-- category-- drop sales and on rows-- drop iif func.
+u can also drop iif func on color.
+
+U can also try with rows--subcategory.
+
+Next is Logical Func 3-- Case function -- works lly with if.
+
+CASE [Category]
+WHEN "Furniture"
+THEN  "Fur"
+WHEN "Office Supplies"
+THEN "Off"
+WHEN "Technology"
+THEN "Tech"
+END
+
+rows-- category, case function
+
+if fun is also giving same o/p.
+
+Next is Date function 1--create calc field-- Date function--Date("2024-01-01")--apply--ok
+
+put this date function on marks text and see.
+
+lly, we can have dateadd() and datediff().
+DATEDIFF('year',[Order Date],[Ship Date])-- apply --ok
+
+rows-- order date,ship date and drop datediff funtion-- instead of sum,
+make it attr.
+
+now edit DATEDIFF('day',[Order Date],[Ship Date])-- apply--ok
+
+now right click --convert both into exact date, discrete
+
+Now this o/p is average days of shipment.
+
+now instead of attr , do avg and remove everything from rows.
+So, 4.006 -- avg days of shipment.
+
+Next is datename.
+
+DATENAME('month',[Order Date])-- apply ok-- apply-- ok
+
+datename into dim and datepart into dim.
+
+rows-- datename function
+drop attr(datepart function)
+
+so datename returns month name but datepart gives numbers.
+
+Next are String Functions
+
+String Function
+• String function are used to manipulate string data type of data in the data sources
+• Tableau provides various string function to format or alter string data or substring.
+• Most widely used string functions are:
+1. CONTAINS
+2. FIND
+3. LEFT
+4. LEN
+5. RIGHT
+6. STR
+
+--new sheet-- string functions-- rows-- customer name
+
+cretae calc field--Contains Function-- CONTAINS([Customer Name]," B")-- apply--ok
+filter-- contains func--so all those names which have space B are coming in o/p.
+
+Next is Find function-- FIND([Customer Name]," B")-- gives substr position.
+drop find function-- change it to attr().
+
+new calc field--Len of FirstName--[Find function]-1
+next drop this func make it attr
+
+right click on value--format--to convert into whole number--fields--select field-- drop down -- number(standard)
+
+Next is lenth Function--LEN([Customer Name])--apply--ok
+
+Next lenght of last Name= [Length Function]-[Len of FirstName]-1--
+
+Now to get fname-- Left Function--LEFT([Customer Name],[Len of FirstName])
+
+Next -- Right Function--RIGHT([Customer Name],[Length Of Last Name])
+
+Next generating mail ids--so, cal fiedl--- mail id-- [Left Function]+[Right Function]+"@itvedant.com"
+Edit mail id--LOWER([Left Function]+[Right Function]+"@itvedant.com")
+
+https://drive.google.com/drive/folders/1I82drehRlm_EfwEDF1prEbCB_lJDGpaT
+04-27
+
+file:///D:/Parinita_itvedant/Tableau/TableauItvedantOnline/Presentations/TableauS5-charts,dual%20axis.pdf
+
+Types of Reference Lines, Bands, Distributions, and Boxes
+• Reference Lines -
+You can add a reference line at a constant or computed value on the axis. Computed values can be based on a
+specified field.
+
+https://drive.google.com/drive/folders/1I82drehRlm_EfwEDF1prEbCB_lJDGpaT
+04-27
+2:00-- Analytics--reference line, ref band and distribution
+
+So if we wnat to know, how many cell values are below the avg cell value,
+how many above the avg of cell value,so for that 1st we need to take out avg of cell values.
+
+so for this analytics part of tableau.
+
+We can use ref line with parameter, with ref line or with constant.
+
+New sheet-- reference line-- row sales, cols- segment
+analytics-- if u want to plot average line--then from summarize,
+otherwise  from custom reference line.
+
+So pick up ref line from custom and drop,
+8:00-- https://drive.google.com/drive/folders/1I82drehRlm_EfwEDF1prEbCB_lJDGpaT
+4:27
+
+
+now avg here is (1529716+920008+488365)/3
+So we will do this using analytics .
+
+drop ref line-- value--sum(sales),
+avg,label--value,
+if label=custom, then Average=<Value>
+
+If average ke upar vale section ka colrs u can change--by fill above
+
+if u want to put maximum-- then
+value-- sum(sales),maximum,
+label-custom, Max=<Value>
+ok
+
+we can even plot median. SO do changes for median.
+
+next if on cols--region,segment, rows-sum(sales)
+edit ref line-- scope-- per pane.
+if scope is entire table, then it will be single line.
+Not according to region.
+So keep --per pane.
+
+remove this line now.
+
+now lets suppose , i want to take value as input from user,
+then 
+
+create parameter--Enter value for reference line
+datatype-- integer,
+display format-0,current value-0
+--ok
+
+right click -- show parameter.
+
+So now, edit ref line--
+value--choose parameter--enter value for ref line--
+label--custom, New Target=<Value>
+
+Now, whatever value user will give, that will be our target.
+
+Next is ref band--
+Reference Bands -
+Reference bands shade an area behind the marks in the view between two constant or computed values on 
+the axis.
+
+We can manage on table level or per pane.
+
+So new sheet-- reference band--
+
+cols-- segemnt, rows- sum(sales)
+plotting band from min to max value.
+
+analytics-- drop ref band--entire table-- ok
+
+instead of max -if u want avg --u can do that.
+instead of max -- u can do median.
+
+In the similar way , u can create parameter.
+
+next is Reference Distributions -
+Reference distributions add a gradient of shading to indicate the distribution of values along the axis.
+this deals with percentiles.
+Lets suppose we want to draw band from 20% to 40%.
+So always distributions plot bands.
+
+new sheet-- ref distribution
+cols-- segmnet, rows- sales, labels
+drop distribution band
+u can edit-- value--20,50
+here also we have parameter option.
+
+Next is box plot.
+col-- category rows-- sum(sales)
+show me-- box plot
+
+Next is trend line with line chart.
+cols- order date
+rows-- sales
+Analytics-- trend line
+
+Next is forecasting--
+cols-- month(order date)
+rows-- sum(sales)
+labels on
+analytics-- forecast
+
+Now forecast doesn't work on exact dates.
+
+Next is new sheet-- Statistical Summary Card
+cols- sales, rows-- profit
+detail-- customer name
+
+now next to from where we set view, there is 
+show/hide card-- summary
+
+Next is Dashboard--
+new -- sample eu superstore -- orders
+1. new sheet--Sales KPI
+text marks-- sales
+order date on filters--year--tick 2018
+
+Now rename heading to Sales-- bold,12,blue,middle alignment
+next right click on 1,042,204 -- format--fields-- select--
+pane--font--18,bold,blue,middle alignment
+
+next duplicate this sheet.
+text--profit.
+Renmae heading-- Profit
+
+
+next is new sheet-- units Sold--text-- Quantity
+format--18--blue colr,bold
+
+Next is line chart-- new sheet-- Sale Trend
+cols-- Order date
+rows-- sales
+drop trend line
+Now axis values are getting shown.
+So just right click--untick show header
+from both axis
+
+next duplicate this sheet--instead of sales put profit.
+
+Again duplicate-- instead of Profit put Quantity
+rename sheet-- Units Sold Trend
+
+Next new dashboard-- Demo Dashboard
+
+So here we don't have shelves.
+We have default device preview.
+
+So device preview-- device type-- desktop
+
+leave it by default to default.
+Size-- automatic
+Then we have sheet names.
+Then we have objects.
+
+So double click on text.
+Give title of sheets.
+ABC ltd Executive Report--22 , bold, middle
+
+But now this is in our complete sheet.
+So use vertical object.
+drag and drop vertical object.
+
+Next drop horizontal container
+And adjust its size for putting filters.
+Then divide the bigger right portion by putting
+vertical container.
+Keep the top area lesser than below one.
+
+Next on the top horizontal container make 5 partitions.
+
+Next on starting 3 partitions, drop sale trend,
+profit trend and units sold trend.
+Next below lines, put sales kpi, profit kpi 
+and unit solds kpi.
+
+Next we need to design.
+So edit title, Sales--bold, center,15.
+Then below it, right click on title, hide title.
+Also right click-- see drop down i.e.--more options--
+fit to entire view,
+
+lly, for Profit and Units Sold.
+
+Next -- new sheet-- Profit By Segment
+col-- segment, row-- profit, show me== pie
+entire view-- give labels,
+text-- segment,profit
+
+Next on dashboard-- drop Profit By Segment
+Delete extra info coming.
+
+Next on sheet--Profit by ship mode--
+cols-ship mode, row--profit.
+
+Next in dashboard just drag and drop.
+
+next, in the filter section,
+u can see some filters, so that is alright.
+Leave them there.
+
+u can save this as workbook.
+
+Now next new sheet-- Sales By Subcategory
+this we will do by Tree map. 
+This helps in showing level by level hierarchy.
+
+So creating hierrarchy-- With Category,
+so right click category-- name-- Product Hierrachy
+Next sub category-- add to hierarchy
+Next, click on product name-- add to hierarchy--Product name
+
+cols-category, rows-- sales
+show me-- tree
+
+Next diiding below part of hori section into 2.
+and put sales by subcategory-- fit entire view.
+
+Next is Count of Orders and Returns.
+Orange line will be count of return.
+In data source we have count of order.
+
+So we will use relationship with retruns.
+So, indata source,
+ drag retruns and drop next to orders.
+
+so we r only applying on relationships on logical level.
+no joining, no blending.
+So bcoz of this, data in other sheets will not change.
+
+So now goto sheet10,
+u will see returns.
+
+Next,in rows put orders,retruns
+cols-- order date--keep month
+
+next right click on month-- continuous
+
+next cnt(orders) -- convert it into bar using
+marks pane.
+show me--choose dual axis
+rename sheet- Orders And Returns--B,center
+
+Next going to dashboard--drop this sheet.
+Next pick its legend on the left corner
+and drop below order and returns in dashboard.
+
+next sheet-- Today's date
+Next we need footer-- 
+new calculatefd function--Today Function
+TODAY()--apply--ok
+
+Put this function on label. Make exact date from marks pane.
+
+Cretae new partition on top right-- put today's date,
+hide title-- format date--15,B
+
+Next creating footer.
+search copyright symbol.
+https://symbolsdb.com/copyright-symbol#different-styles-- copy from here.
+
+So create calc field--Footer
+"© "+DATENAME("year",TODAY())+" ABC Ltd. All Rights Reserved "
+
+--here we have used Datename bcoz
+we cannot concatenate number with string.
+Rest of the thing is String so date also in string.
+-- apply--ok
+
+Drop this footer into text.
+
+Next in dashboard create vertical container.
+drop footer.-- fit to entire view-- format.
+
+Next goto any sheet. eg. Profit By Segment
+drag region and drop on filter-- default select all- apply.
+
+lly, drag country and drop to filter--
+
+Next we want these filter to be applied
+on all the sheets.
+
+So, right click on region on filter-- apply to worksheets
+--all using related data source.
+
+lly, to Country
+
+Now, select sales by subcategory from dashboard,
+dropdown-- filter-- country, region
+
+Make it single value dropdown
+
+drag country below region.
+
+next, drag text and drop over region--
+Nmae it Selection--14,Bold
+
+next adjust it.
+
+Next goto Profit KPI sheet-
+create calc filed-- Check Profit or Loss
+SUM([Profit])>0
+put this in color.
+
+Now from Dashboard-- region--all, countyr-- Netherlands
+So,goto Profit KPi--change the false color kpi,
+to red.
+
+So how to check performance of our dashboard--
+in the server -- there is run optimizer--
+
+So, once our dashboard is created-- hide all the sheets.
+
+so right click on dashboard-- hide all sheets.
+
+Next -- run optimizer again--
+1st see for unused fields--in datasource--
+So from data source-- u can hide these unused cols.
+
+If u want to bring hidden fields-- next to rows-- settings
+is there-- from there u can bring hidden fields.
+
+Next our dashboard size is automatic--convert it 
+to fixed size
+
+Action Filter-- its types are-- filter,url and type.
+This u only get at dashboard level and not at sheet lvel.
+
+Son on tab-- dashboard-- actions--add action--
+filter,highlight,goto url,
+goto list , these all r for navigation.
+rest 2 r optional
+and donot directly affect the dashboard.
+So, 1st filter-- we have source sheet 
+and target sheet.
+Kaun sa sheet select karne ke badd
+ye action perform hona chahiye is ur source sheet.
+So, source sheet is sales by subcategory.
+
+run action on is like a mouse hover,select,
+menu,single select only.
+so select select.
+
+then kaun kaun se sheet effect hone chahiye,
+so tick all the sheets accept tree map,
+today;s date and footer.--ok
+
+Next is Highlight--
+So cretae new sheet---Demo Of Customer Details
+
+rows-- customer id, customer name,category,
+sub-category.
+drop sales,profit,quantiy.
+and from show me select tables.
+
+create dashboard 2-- size--automatic
+put demo of customer details sheet here.
+
+To navigate from dashboard 1 to dashboard 2,
+for this we can use go to sheet and highlight option.
+So 1st goto sheet.
+So we want to go from demo dashboard1 to dashboard2.
+
+Demo dashboard1-go to sheet--demo dashboard--
+tick profit by segment,
+run action on--select
+target--dashboard2
+
+next click on any part of profit by segment-- 
+u will goto dashboard2.
+and new sheet-- Profit By Ship mode
+
+So,now highlight--
+Dashboard-- action--highlight--
+tick sales by category--
+taregt sheets-- dashboard2--tick--demo of cust details--
+target highlighting-- selected fields-- sub-category
+
+So now, when we click on copiers-- related data
+will be highlighted on dashboard2.
+
+Next is go to url--
+So cretae new sheets-- Country wise Sales--
+cols-- Country, rows-- Sales
+filters-- Country, region
+now from show me-- filled map--
+color--country, 
+label-- sales,country
+
+Next in dashboard2--drop horizontal container--
+drop country wise.
+Now i want , when i click on sweden,
+a wikipedia regarding sweden will open.
+
+So now dashboard-- actions-- go to url--
+Name-- hyperlink1,
+source sheet-- country wise sales,
+run action on-- select
+url taregt-- new browser tab
+url-- https://en.wikipedia.org/wiki/Sweden
+Now, when we r clicking Denmark-- it is opening
+same url-- So edit hyperlink1--
+https://en.wikipedia.org/wiki/<Country>
+
+Next we will insert, web page here only,
+So on the left, in objects-- web page--
+https://en.wikipedia.org/wiki
+
+edit url action-- url target-- we page object--
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#######################################################Old Notes################################
+
 Dimensions and Measures-
 Dimensions are fields that are considered as independent variables. Different aggregate functions cannot be applied on them.For eg, colname.It is marked blue
 Measures are field values that are considered as dependent variables. We can apply aggregate functions on them. For eg,col values.It is marked green.
